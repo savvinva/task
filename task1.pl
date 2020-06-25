@@ -28,7 +28,7 @@ my $flag;       # -- Флаг = (<=|=>|->|**|==)
 my $string;     # -- Остальная часть строки
 my $dbh;        # -- dbi дескриптор к бд
 my $addr;       # -- Адрес получателя (отправителя)
-my $bool;       # -- Логическое значение
+my $bool;       # -- Логическое значение для записи в лог бд
 
 my $zip = Archive::Zip->new("$path\\$filezip");  # Разархивируем лог в каталог $path
    unless ($zip) {die "cannot open file";
