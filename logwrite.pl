@@ -26,9 +26,9 @@ my $query = "SELECT l.created cre,l.str str
              order by m.int_id, m.created";
 
 my $sth = $dbh->prepare($query);
-my $rv = $sth->execute(); # Возвращает количество записей
+my $rv = $sth->execute(); # count record
 
-my $i = 0; # Для подсчета количества строк
+my $i = 0; # line counting
 
 print '<table width="100%" cellspacing="0" cellpadding="0">';
 while (my $ref = $sth->fetchrow_hashref()) {
